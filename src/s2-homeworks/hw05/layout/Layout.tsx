@@ -1,4 +1,5 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react'
+import s from './Layout.module.css'
 import {Header} from '../header/Header'
 import {Sidebar} from '../sidebar/Sidebar'
 
@@ -22,12 +23,11 @@ export const Layout: FC<PropsType> = ({children}) => {
             display: 'flex', flexDirection: 'column', width: '100%',
             maxWidth: '1280px',
             height: '100vh',
-            justifyContent: 'center',
         }}>
 
             <Sidebar open={open} handleClose={handleClose}/>
             <Header handleOpen={handleOpen}/>
-            <div>
+            <div className={s.pages}>
                 {/*страницы*/}
                 {children}
             </div>

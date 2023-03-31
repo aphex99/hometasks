@@ -5,6 +5,8 @@
     box-shadow: 0 10px 40px rgba(29, 33, 38, 0.13), 0 1px 2px rgba(29, 33, 38, 0.1);
     z-index: 2;
     visibility: hidden;
+    position: absolute;
+    transition: height 0.7s ease-out;
 }
 
 .sidebar.open {
@@ -37,10 +39,13 @@
 
 }
 
+.linkWrap {
+    margin-bottom: 45px;
+}
+
 .nav a {
     text-decoration: none;
     color: black;
-    margin-bottom: 45px;
 }
 
 .nav a:last-child {
@@ -68,6 +73,7 @@
     left: 269px;
     background-color: white;
     border: none;
+    cursor: pointer;
 }
 
 .close img {

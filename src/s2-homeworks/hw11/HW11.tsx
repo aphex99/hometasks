@@ -48,8 +48,14 @@ function HW11() {
     }
 
     return (
-        <div id={'hw11'}>
-            <div className={s2.hwTitle}>Homework #11</div>
+        <div id={'hw11'} className={s.main}>
+
+            <div className={s.titleBlock}>
+                {/*<hr className={s.hrTop}/>*/}
+                <div className={s2.hwTitle}>Homework #11</div>
+                <hr className={s.hrBottom}/>
+            </div>
+
 
             <div className={s2.hw}>
                 <div className={s.container}>

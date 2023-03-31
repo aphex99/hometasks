@@ -38,33 +38,41 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                 </button>
 
                 <nav id={'hw5-menu'} className={s.nav}>
-                    <NavLink
-                        id={'hw5-pre-junior-link'}
-                        to={PATH.PRE_JUNIOR}
-                        onClick={handleClose}
-                        className={preJuniorPathActiveClass}
-                        // className={...} // делает студент
-                    >
+                    <span className={s.linkWrap}>
+                        <NavLink
+                            id={'hw5-pre-junior-link'}
+                            to={PATH.PRE_JUNIOR}
+                            onClick={handleClose}
+                            className={preJuniorPathActiveClass}
+                            // className={...} // делает студент
+                        >
                         Pre-junior
                     </NavLink>
-                    <NavLink
-                        id={'hw5-junior-link'}
-                        to={PATH.JUNIOR}
-                        onClick={handleClose}
-                        className={juniorPathActiveClass}
-                        // className={...} // делает студент
-                    >
+                    </span>
+
+                    <span className={s.linkWrap}>
+                        <NavLink
+                            id={'hw5-junior-link'}
+                            to={PATH.JUNIOR}
+                            onClick={handleClose}
+                            className={juniorPathActiveClass}
+                            // className={...} // делает студент
+                        >
                         Junior
                     </NavLink>
-                    <NavLink
-                        id={'hw5-junior-plus-link'}
-                        to={PATH.JUNIOR_PLUS}
-                        onClick={handleClose}
-                        className={juniorPlusPathActiveClass}
-                        // className={...} // делает студент
-                    >
+                    </span>
+
+                    <span className={s.linkWrap}>
+                        <NavLink
+                            id={'hw5-junior-plus-link'}
+                            to={PATH.JUNIOR_PLUS}
+                            onClick={handleClose}
+                            className={juniorPlusPathActiveClass}
+                            // className={...} // делает студент
+                        >
                         Junior Plus
                     </NavLink>
+                    </span>
                 </nav>
             </aside>
         </>
