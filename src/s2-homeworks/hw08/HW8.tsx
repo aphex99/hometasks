@@ -56,9 +56,11 @@ const HW8 = () => {
     return (
         <div id={'hw3'}>
             <div className={s2.hwTitle}>Homework #8</div>
+            <hr className={s2.hr}/>
             <div className={s2.hw}>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
+
                         <SuperButton
                             id={'hw8-button-up'}
                             onClick={sortUp}
@@ -66,6 +68,7 @@ const HW8 = () => {
                         >
                             Sort up
                         </SuperButton>
+
                         <SuperButton
                             id={'hw8-button-down'}
                             onClick={sortDown}
@@ -73,6 +76,7 @@ const HW8 = () => {
                         >
                             Sort down
                         </SuperButton>
+
                         <SuperButton
                             id={'hw8-button-18'}
                             onClick={check18}
@@ -80,13 +84,14 @@ const HW8 = () => {
                         >
                             Check 18+
                         </SuperButton>
+
                     </div>
 
                     <table id={'hw8-users'} className={s.users}>
                         <thead className={s.thead}>
-                        <tr>
-                            <td className={s.nameCol}>Name</td>
-                            <td className={s.ageCol}>Age</td>
+                        <tr className={s.head}>
+                            <td style={{fontWeight: '600'}} className={s.nameCol}>Full name</td>
+                            <td style={{fontWeight: '600'}} className={s.ageCol}>Age</td>
                         </tr>
                         </thead>
 
@@ -94,6 +99,7 @@ const HW8 = () => {
                     </table>
                 </div>
             </div>
+            <hr style={{marginTop:'33px'}} className={s2.hr}/>
         </div>
     )
 }

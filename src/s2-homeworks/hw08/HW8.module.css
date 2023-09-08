@@ -1,23 +1,65 @@
-.item {
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
-.item:last-of-type {
-}
-
-.users {
-}
-
-.buttonsContainer {
+* {
+    box-sizing: border-box;
 }
 
 .container {
+    width: 100%;
+    max-width: 606px;
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.buttonsContainer {
+    font-size: 0;
+    display: flex;
+    justify-content: end;
+}
+
+.users {
+    margin-top: 18px;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0;
 }
 
 .thead {
+    background-color: #E5E5E5;
 }
 
 .nameCol {
+    height: 36px;
+    width: 297px;
+    padding-left: 17px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: left;
 }
 
 .ageCol {
+    width: 309px;
+    height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-align: left;
 }
+
+.item {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+

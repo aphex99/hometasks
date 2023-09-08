@@ -30,22 +30,23 @@ function HW11() {
             saveState('hw11-value1', value[0])
             setValue1(value[0])
 
+            saveState('hw11-value2', value)
             setValue2(value)
 
-            // if (value[1] - value[0] < minDistance) {
-            //     if (activeThumb === 0) {
-            //         const clamped = Math.min(value[0], 100 - minDistance)
-            //         saveState('hw11-value2', [clamped, clamped + minDistance])
-            //         setValue2([clamped, clamped + minDistance])
-            //     } else {
-            //         const clamped = Math.max(value[1], minDistance)
-            //         saveState('hw11-value2', [clamped - minDistance, clamped])
-            //         setValue2([clamped - minDistance, clamped])
-            //     }
-            // } else {
-            //     saveState('hw11-value2', value)
-            //     setValue2(value)
-            // }
+            if (value[1] - value[0] < minDistance) {
+                if (activeThumb === 0) {
+                    const clamped = Math.min(value[0], 100 - minDistance)
+                    saveState('hw11-value2', [clamped, clamped + minDistance])
+                    setValue2([clamped, clamped + minDistance])
+                } else {
+                    const clamped = Math.max(value[1], minDistance)
+                    saveState('hw11-value2', [clamped - minDistance, clamped])
+                    setValue2([clamped - minDistance, clamped])
+                }
+            } else {
+                saveState('hw11-value2', value)
+                setValue2(value)
+            }
         }
     }
 
@@ -55,7 +56,7 @@ function HW11() {
             <div className={s.titleBlock}>
                 {/*<hr className={s.hrTop}/>*/}
                 <div className={s2.hwTitle}>Homework #11</div>
-                <hr className={s.hrBottom}/>
+                <hr className={s2.hr}/>
             </div>
 
 
@@ -78,7 +79,7 @@ function HW11() {
                             // сделать так чтоб value1/2 изменялось // пишет студент
                             value={value2}
                             onChange={change}
-                            disableSwap
+                            // disableSwap
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2[value2.length - 1]}</span>
                     </div>
