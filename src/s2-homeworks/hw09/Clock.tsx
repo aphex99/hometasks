@@ -7,7 +7,7 @@ function Clock() {
     const [timerId, setTimerId] = useState<number | undefined>(undefined)
     // for autotests // не менять // можно подсунуть в локалСторэдж нужную дату, чтоб увидеть как она отображается
     const [date, setDate] = useState<Date>(new Date(restoreState('hw9-date', Date.now())))
-    const [show, setShow] = useState<boolean>(true)
+    const [show, setShow] = useState<boolean>(false)
     const [timerStart, setTimerStart] = useState(false)
 
     const start = () => {
@@ -31,7 +31,7 @@ function Clock() {
         setShow(true)
     }
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-        setShow(true)
+        setShow(false)
     }
 
     const yyyy = date.getFullYear()
