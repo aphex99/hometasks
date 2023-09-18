@@ -99,7 +99,7 @@ const HW8 = () => {
                     </table>
                 </div>
             </div>
-            <hr style={{marginTop:'33px'}} className={s2.hr}/>
+            <hr style={{marginTop:'33px', marginBottom: '36px'}} className={s2.hr}/>
         </div>
     )
 }

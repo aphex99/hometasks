@@ -3,29 +3,6 @@
     border: 1px solid #0066CC;
     border-radius: 3px;
     padding: 5px 24px 5px 24px;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0;
-    color: #0066CC;
-    background-color: white;
-    margin-right: 12px;
-}
-
-.button:last-child {
-    margin-right: 0;
-
-}
-
-.disabled {
-}
-
-.secondary {
-    height: 30px;
-    border: 1px solid #0066CC;
-    border-radius: 3px;
-    padding: 5px 24px 5px 24px;
     margin-right: 12px;
     text-align: center;
     font-family: Montserrat;
@@ -34,6 +11,33 @@
     letter-spacing: 0;
     color: white;
     background-color: #0066CC;
+    cursor: pointer;
+    opacity: 100;
+}
+
+.button:last-child {
+    margin-right: 0;
+}
+
+.disabled {
+    opacity: .4;
+    cursor: auto;
+}
+
+.secondary {
+    height: 30px;
+    border: 1px solid #0066CC;
+    border-radius: 3px;
+    padding: 5px 24px 5px 24px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #0066CC;
+    background-color: white;
+    margin-right: 12px;
+    cursor: pointer;
 }
 
 .default {
