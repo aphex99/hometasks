@@ -1,3 +1,13 @@
+@keyframes rotate {
+    to {transform: rotate(4turn);}
+}
+
 .loader {
+    height: 108px;
+    width: 108px;
+    background: url("./assets/Ellipse 2.jpg") no-repeat;
+    background-size: contain;
+    animation-name: rotate;
+    animation-duration: 5s;
     /*свг и/или анимация*/
 }
