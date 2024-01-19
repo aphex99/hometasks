@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react'
+import React, {FC, ReactNode, useState} from 'react'
 import s from './Layout.module.css'
 import {Header} from '../header/Header'
 import {Sidebar} from '../sidebar/Sidebar'
