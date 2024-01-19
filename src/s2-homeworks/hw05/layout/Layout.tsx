@@ -8,22 +8,21 @@ type PropsType = {
 }
 
 export const Layout: FC<PropsType> = ({children}) => {
+
     const [open, setOpen] = useState(false)
+
     const handleClose = () => setOpen(false)
     const handleOpen = () => setOpen(true)
 
-    useEffect(() => {
-        open && (document.body.style.overflow = 'hidden')
-        !open && (document.body.style.overflow = 'unset')
-    }, [open]) // отключает прокрутку при открытом меню
+    // useEffect(() => {
+    //     open && (document.body.style.overflow = 'hidden')
+    //     !open && (document.body.style.overflow = 'unset')
+    // }, [open])
+    // отключает прокрутку при открытом меню
 
     return (
 
-        <div style={{
-            display: 'flex', flexDirection: 'column', width: '100%',
-            maxWidth: '1280px',
-            height: '100vh',
-        }}>
+        <div className={s.main}>
 
             <Sidebar open={open} handleClose={handleClose}/>
             <Header handleOpen={handleOpen}/>

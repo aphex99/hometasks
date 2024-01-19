@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 .App {
-    display: flex;
-    justify-content: center;
-    z-index: 3;
     user-select: none;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .hr {

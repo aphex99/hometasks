@@ -1,7 +1,20 @@
 .main {
-    margin-bottom: 47px;
+    margin-top: 47px;
+    margin-bottom: 39px;
 }
 
 .content {
-    margin: 42px 0 0 70px;
+    margin: 0 0 336px 70px;
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top: 20px;
+    left: 14px;
+}
+
+.button {
+    position: absolute;
+    top: 42px;
 }

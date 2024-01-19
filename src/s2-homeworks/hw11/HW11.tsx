@@ -55,7 +55,7 @@ function HW11() {
 
             <div className={s.titleBlock}>
                 {/*<hr className={s.hrTop}/>*/}
-                <div className={s2.hwTitle}>Homework #11</div>
+                <div className={s2.hwTitle}>Hometask № 11</div>
                 <hr className={s2.hr}/>
             </div>
 
@@ -86,6 +86,7 @@ function HW11() {
 
                 </div>
             </div>
+            <hr className={s2.hr}/>
         </div>
     )
 }

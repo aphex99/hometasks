@@ -18,6 +18,27 @@ html {
     color: var(--color);
 }
 
-.select {
+.main {
+    margin-top: 35px;
+}
 
+.selectContainer {
+    margin: 33px 0 244px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.select {
+    width: 171px;
+    height: 36px;
+    padding-left: 10px;
+    border: 0;
+    outline: 1px solid;
+    border-right: 8px solid transparent;
 }

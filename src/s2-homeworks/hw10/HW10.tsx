@@ -32,24 +32,26 @@ const HW10 = () => {
 
     return (
         <div id={'hw10'} className={s.main}>
-            <div className={s2.hwTitle}>Homework #10</div>
+            <div className={s2.hwTitle}>Hometask № 10</div>
             <hr className={s2.hr}/>
             <div className={s.content}>
 
                 {isLoading.isLoading ? (
-                    <div id={'hw10-loading'}>
+                    <div id={'hw10-loading'} className={s.loader}>
                         <Loader/>
                     </div>
                 ) : (
-                    <SuperButton
-                        id={'hw10-button-start-loading'}
-                        onClick={setLoading}
-                    >
-                        Set loading...
-                    </SuperButton>
+                    <div className={s.button}>
+                        <SuperButton
+                            id={'hw10-button-start-loading'}
+                            onClick={setLoading}
+                        >
+                            Set loading...
+                        </SuperButton>
+                    </div>
                 )}
-
             </div>
+            <hr className={s2.hr}/>
         </div>
     )
 }
