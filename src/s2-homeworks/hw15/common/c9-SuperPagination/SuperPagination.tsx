@@ -1,7 +1,7 @@
-import React from 'react'
-import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
-import s from './SuperPagination.module.css'
+import React, {ChangeEvent} from 'react';
+import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect';
+import {Pagination} from '@mui/material';
+import s from './SuperPagination.module.css';
 
 export type SuperPaginationPropsType = {
     id?: string
@@ -16,21 +16,30 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    // пишет студент // вычислить количество страниц
+    const lastPage = Math.ceil(totalCount / itemsCountForPage);
 
-    const onChangeCallback = (event: any, page: number) => {
+    const onChangeCallback = (event: ChangeEvent<unknown>, value: number) => {
         // пишет студент
-    }
+        onChange(value, itemsCountForPage);
+    };
 
-    const onChangeSelect = (event: any) => {
-        // пишет студент
-    }
+    const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
+        onChange(page, +event.target.value);
+    };
+    const onChangeSelectOption = (value: number) => {
+        onChange(page, value);
+    };
 
     return (
         <div className={s.pagination}>
             <Pagination
                 id={id + '-pagination'}
                 sx={{
+                    '& .MuiPaginationItem-root': {
+                        fontSize: '14px',
+                        height: 24,
+                    }
                     // стили для Pagination // пишет студент
                 }}
                 page={page}
@@ -41,7 +50,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
@@ -53,13 +62,14 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 10, value: 10},
                 ]}
                 onChange={onChangeSelect}
+                onChangeOption={onChangeSelectOption}
             />
 
             <span className={s.text2}>
-                строк в таблице
+
             </span>
         </div>
-    )
-}
+    );
+};
 
-export default SuperPagination
+export default SuperPagination;
