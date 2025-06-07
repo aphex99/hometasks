@@ -102,10 +102,7 @@ const HW15 = () => {
             newParams.set('count', count.toString());
             return newParams;
         });
-        const params = Object.fromEntries(searchParams);
-        sendQuery({sort: params.sort, page: +params.page, count: +params.count});
-        setPage(+params.page || 1);
-        setCount(+params.count || 4);
+        sendQuery({sort, page, count});
     }, []);
 
     const mappedTechs = techs.map(t => (

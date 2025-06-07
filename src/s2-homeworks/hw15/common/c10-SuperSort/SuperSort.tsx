@@ -31,7 +31,6 @@ const SuperSort: React.FC<SuperSortPropsType> = (
 
     const onChangeCallback = () => {
         onChange(pureChange(sort, down, up));
-        console.log(pureChange(sort, down, up));
     };
 
     // const icon = sort === down
@@ -50,8 +49,6 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             buttonClass = s.sortButtonUp;
             break;
     }
-
-    console.log(sort);
 
     return (
         <span
